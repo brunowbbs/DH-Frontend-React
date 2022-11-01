@@ -11,7 +11,7 @@ const App = () => {
     <>
       <ul>
         {items.map((item) => (
-          <li>{`O item ${item} foi adicionado à lista!`}</li>
+          <li>{"O item" + { item } + "foi adicionado à lista!"}</li>
         ))}
       </ul>
       <button onClick={addItem}>Aperte</button>
