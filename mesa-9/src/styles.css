@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container {
+  padding: 30px;
+}
+
+.form {
+  max-width: 900px;
+  margin: auto;
+  text-align: right;
+}
+
+.container_input {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 0.9rem;
+}
+
+input[type="submit"] {
+  width: 150px;
+}
+
+.line_title {
+  width: 100%;
+}
+
+table {
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
+}
+
+th,
+tr,
+td {
+  padding: 5px;
+}
+
+tr,
+td {
+  text-align: center;
+}
