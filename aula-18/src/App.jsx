@@ -1,64 +1,17 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Details from "./pages/Details";
+import Home from "./pages/Home";
+
 import "./styles.css";
 
-const App = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    description: "",
-    price: "",
-    manufacturer: "",
-    image: "",
-  });
-
-  return (
-    <div className="container">
-      <form>
-        <h2>Cadastrar Produto</h2>
-        <input
-          placeholder="Nome"
-          value={formData.name}
-          onChange={(event) =>
-            setFormData({ ...formData, name: event.target.value })
-          }
-        />
-        <input
-          placeholder="Preço"
-          value={formData.price}
-          onChange={(event) =>
-            setFormData({ ...formData, price: event.target.value })
-          }
-        />
-        <input
-          placeholder="Fabricante"
-          value={formData.manufacturer}
-          onChange={(event) =>
-            setFormData({ ...formData, manufacturer: event.target.value })
-          }
-        />
-        <input
-          placeholder="Image"
-          value={formData.image}
-          onChange={(event) =>
-            setFormData({ ...formData, birthDate: event.target.value })
-          }
-        />
-        <textarea
-          placeholder="Descrição"
-          value={formData.description}
-          onChange={(event) =>
-            setFormData({ ...formData, description: event.target.value })
-          }
-        />
-        <button type="button" onClick={() => {}}>
-          Salvar
-        </button>
-      </form>
-
-      <div className="products">
-        <h1>Produtos</h1>
-      </div>
-    </div>
-  );
-};
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/details/:id" element={<Details />} />
+      <Route path="*" element={<h1>Not found</h1>} />
+    </Routes>
+  </BrowserRouter>
+);
 
 export default App;
